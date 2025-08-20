@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ProviderName="Microsoft.Data.SqlClient" SelectCommand="SELECT * FROM [cathode]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ProviderName="<%$ ConnectionStrings:RCHCathode_DevConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [cathode]" ConnectionString="<%$ ConnectionStrings:RCHCathode_DevConnectionString %>"></asp:SqlDataSource>
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
             <Columns>
